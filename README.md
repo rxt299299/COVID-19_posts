@@ -34,3 +34,17 @@ http://127.0.0.1:5000/quesion5/{hashtag_name}
 }
 
 ```
+
+# Containerize the Flask application
+## Build Docker image
+- Open a terminal in the project root directory and run the following command to build the Docker image:
+```
+docker build -t my-flask-app .
+```
+## Run Docker container
+- Run the following command to start the Docker container
+```
+docker run -d -p 5000:5000 my-flask-app
+```
+- This will start a Docker container in the background and map port 5000 inside the container to port 5000 on the host.
+- Access the API: Once the container is running, you can access the API by visiting: http://localhost:5000/quesion5/diedsuddenly
